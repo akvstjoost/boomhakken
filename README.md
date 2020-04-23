@@ -5,8 +5,8 @@ Dit is een gratis database die ergens op een server staat. Je kunt zo'n database
 Als je index.html opent, stuurt hij je (als de boom nog niet is omgehakt) door naar boomstaatnog.html
 (hiervoor leest hij de waarde uit de database)
 
-Hier kun je als je wil de boom omhakken (de waarde in de database veranderen)
+Hier kun je als je wil de boom omhakken (=de waarde in de database veranderen)
 
-Als je nu opnieuw index.html opent, stuurt hij je door naar boomomgehakt.html
+Als de boom hebt omgehakt en opnieuw index.html opent, stuurt hij je door naar boomomgehakt.html
 
 In boomadmin.html kun je de status van de boom in de database wijzigen
