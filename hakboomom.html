@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var puttruesettings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://techlab-dea2.restdb.io/rest/boom",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "5ea04989919b360ce59b7bb2",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify({"omgehakt": "true"})
+}
+
+$(document).ready(function(){
+	$.ajax(puttruesettings).done(function (response) {
+
+});
+});
+</script>
+</head>
+<body>
+
+Je hebt de boom zojuist omgehakt!
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var getsettings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://techlab-dea2.restdb.io/rest/boom",
+  "method": "GET",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "5ea04989919b360ce59b7bb2",
+    "cache-control": "no-cache"
+  }
+}
+
+var puttruesettings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://techlab-dea2.restdb.io/rest/boom",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "5ea04989919b360ce59b7bb2",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify({"omgehakt": "true"})
+}
+
+var putfalsesettings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://techlab-dea2.restdb.io/rest/boom",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "5ea04989919b360ce59b7bb2",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify({"omgehakt": "false"})
+}
+$(document).ready(function(){
+  $("#get").click(function(){
+  	$("#text").html("waarde ophalen...")
+	$.ajax(getsettings).done(function (response) {
+    	
+ 	 val=response[response.length-1].omgehakt;
+   if (val)  	$("#text").html("Boom is omgehakt!")
+    if (!val) 	$("#text").html("Boom staat nog!")
+	});
+	});
+  
+  $("#putfalse").click(function(){
+  	$("#text").html("database schrijven...")
+		$.ajax(putfalsesettings).done(function (response) {
+  	$("#text").html("klaar")
+		});
+	});
+  
+  $("#puttrue").click(function(){
+  	$("#text").html("database schrijven...")
+		$.ajax(puttruesettings).done(function (response) {
+      	$("#text").html("klaar")
+		});
+	});
+});
+
+
+
+</script>
+</head>
+<body>
+<button id="get">Lees toetstand van de boom uit database</button>
+
+<button id="putfalse">Zet boom recht</button>
+
+<button id="puttrue">Hak boom om</button>
+<div id="text">
+</div>
+</body>
+</html>

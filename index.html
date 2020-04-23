@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var getsettings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://techlab-dea2.restdb.io/rest/boom",
+  "method": "GET",
+  "headers": {
+    "content-type": "application/json",
+    "x-apikey": "5ea04989919b360ce59b7bb2",
+    "cache-control": "no-cache"
+  }
+
+}
+$(document).ready(function(){
+	$.ajax(getsettings).done(function (response) {
+    	
+ 	 val=response[response.length-1].omgehakt;
+   if (val)  	location.replace("boomomgehakt.html");
+    if (!val) 	location.replace("boomstaatnog.html");
+});
+});
+</script>
+</html>
