@@ -1,6 +1,6 @@
 # boomhakken
 Deze example schrijft en leest een variabele (in ditgeval of een boom is omgehakt of niet) uit een restio.db database
-Dit is een gratis database die ergens op een server staat. Je kunt zo'n database zelf aanmaken.
+Dit is een gratis database die ergens op een server staat. Je kunt zo'n database eventueel zelf aanmaken.
 
 Als je index.html opent, stuurt hij je (als de boom nog niet is omgehakt) door naar boomstaatnog.html
 (hiervoor leest hij de waarde uit de database)
